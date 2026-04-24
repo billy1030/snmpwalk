@@ -7,7 +7,7 @@ SNMPv3 CLI walk tool for Windows and Linux.
 ## Features
 
 - SNMPv3 USM authentication: SHA, SHA224, SHA256, **SHA384**, **SHA512**
-- AES/AES128/AES192/AES256 privacy encryption
+- AES128/AES192/AES256 privacy encryption
 - Multi-host scanning support
 - GET, SET, BULK operations
 
@@ -43,7 +43,7 @@ snmpwalk.exe -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X passwo
 | `-d` | Enable debug output |
 | `-a` | Auth protocol: SHA, SHA224, SHA256, SHA384, or SHA512 |
 | `-A` | Auth password |
-| `-x` | Privacy protocol: AES, AES128, AES192, or AES256 |
+| `-x` | Privacy protocol: AES128, AES192, or AES256 |
 | `-X` | Privacy password |
 | `-v` | Show version |
 
