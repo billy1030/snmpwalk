@@ -1,6 +1,6 @@
-# snmpwalk.exe
+# snmpwalk
 
-SNMPv3 CLI walk tool for Windows.
+SNMPv3 CLI walk tool for Windows and Linux.
 
 **Version:** 1.1.0
 
