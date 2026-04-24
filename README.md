@@ -4,6 +4,25 @@ SNMPv3 CLI walk tool for Windows and Linux.
 
 **Version:** 1.1.0
 
+## Downloads
+
+| Binary | Platform | Architecture |
+|--------|----------|--------------|
+| `snmpwalk.exe` | Windows | x64 |
+| `snmpwalk_linux_amd64` | Linux | x64 |
+| `snmpwalk_linux_arm64` | Linux | ARM64 |
+
+### Linux Setup
+
+```bash
+# Make executable
+chmod +x snmpwalk_linux_amd64    # for x64
+chmod +x snmpwalk_linux_arm64    # for ARM64
+
+# Run
+./snmpwalk_linux_amd64 -H <host> -u <user> -a SHA256 -A <password>
+```
+
 ## Features
 
 - SNMPv3 USM authentication: SHA, SHA224, SHA256, **SHA384**, **SHA512**
@@ -14,20 +33,20 @@ SNMPv3 CLI walk tool for Windows and Linux.
 ## Usage
 
 ```
-snmpwalk.exe -H <host> [options]
+snmpwalk -H <host> [options]
 ```
 
 ### Examples
 
 ```bash
 # Basic walk
-snmpwalk.exe -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X password
+snmpwalk -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X password
 
 # Single OID GET
-snmpwalk.exe -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X password -o 1.3.6.1.2.1.1.1.0
+snmpwalk -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X password -o 1.3.6.1.2.1.1.1.0
 
 # Debug mode
-snmpwalk.exe -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X password -d
+snmpwalk -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X password -d
 ```
 
 ### Options
@@ -64,7 +83,7 @@ snmpwalk.exe -H 192.168.1.254 -u admin -a SHA256 -A password -x AES256 -X passwo
 
 ```bash
 # Recommended for Palo Alto devices
-snmpwalk.exe -H 192.168.1.254 -u admin -a SHA256 -A P@ssw0rd -x AES256 -X P@ssw0rd
+snmpwalk -H 192.168.1.254 -u admin -a SHA256 -A P@ssw0rd -x AES256 -X P@ssw0rd
 ```
 
 ## License
